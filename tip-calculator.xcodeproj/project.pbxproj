@@ -20,6 +20,11 @@
 		020E19032AE84E5F0050BACA /* CombineCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 020E19022AE84E5F0050BACA /* CombineCocoa */; };
 		020E19062AE84EFF0050BACA /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = 020E19052AE84EFF0050BACA /* SnapshotTesting */; };
 		020E19082AE84F140050BACA /* CombineCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 020E19072AE84F140050BACA /* CombineCocoa */; };
+		020E190B2AE86A6B0050BACA /* LogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020E190A2AE86A6B0050BACA /* LogoView.swift */; };
+		020E190D2AE86B620050BACA /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020E190C2AE86B620050BACA /* ResultView.swift */; };
+		020E190F2AE86B7A0050BACA /* BillInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020E190E2AE86B7A0050BACA /* BillInputView.swift */; };
+		020E19112AE86B9D0050BACA /* TipInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020E19102AE86B9D0050BACA /* TipInputView.swift */; };
+		020E19132AE86BB70050BACA /* SplitInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020E19122AE86BB60050BACA /* SplitInputView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +57,11 @@
 		020E18E82AE84DCD0050BACA /* tip-calculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "tip-calculatorUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		020E18EC2AE84DCD0050BACA /* tip_calculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tip_calculatorUITests.swift; sourceTree = "<group>"; };
 		020E18EE2AE84DCD0050BACA /* tip_calculatorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tip_calculatorUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		020E190A2AE86A6B0050BACA /* LogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoView.swift; sourceTree = "<group>"; };
+		020E190C2AE86B620050BACA /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
+		020E190E2AE86B7A0050BACA /* BillInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillInputView.swift; sourceTree = "<group>"; };
+		020E19102AE86B9D0050BACA /* TipInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipInputView.swift; sourceTree = "<group>"; };
+		020E19122AE86BB60050BACA /* SplitInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitInputView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +118,7 @@
 		020E18CA2AE84DCB0050BACA /* tip-calculator */ = {
 			isa = PBXGroup;
 			children = (
+				020E19092AE86A5C0050BACA /* View */,
 				020E18CB2AE84DCB0050BACA /* AppDelegate.swift */,
 				020E18CD2AE84DCB0050BACA /* SceneDelegate.swift */,
 				020E18CF2AE84DCB0050BACA /* ViewController.swift */,
@@ -140,6 +151,18 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		020E19092AE86A5C0050BACA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				020E190A2AE86A6B0050BACA /* LogoView.swift */,
+				020E190C2AE86B620050BACA /* ResultView.swift */,
+				020E190E2AE86B7A0050BACA /* BillInputView.swift */,
+				020E19102AE86B9D0050BACA /* TipInputView.swift */,
+				020E19122AE86BB60050BACA /* SplitInputView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -289,8 +312,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				020E18D02AE84DCB0050BACA /* ViewController.swift in Sources */,
+				020E190B2AE86A6B0050BACA /* LogoView.swift in Sources */,
+				020E190F2AE86B7A0050BACA /* BillInputView.swift in Sources */,
+				020E190D2AE86B620050BACA /* ResultView.swift in Sources */,
 				020E18CC2AE84DCB0050BACA /* AppDelegate.swift in Sources */,
 				020E18CE2AE84DCB0050BACA /* SceneDelegate.swift in Sources */,
+				020E19132AE86BB70050BACA /* SplitInputView.swift in Sources */,
+				020E19112AE86B9D0050BACA /* TipInputView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
