@@ -23,7 +23,8 @@ class CalculatorViewController: UIViewController {
                 resultView,
                 billInputView,
                 tipInputView,
-                splitInputView
+                splitInputView,
+                UIView()
             ]
         )
         
@@ -41,7 +42,7 @@ class CalculatorViewController: UIViewController {
     
     private func layout() {
         
-        view.backgroundColor = .white
+        view.backgroundColor = ThemeColor.background
         view.addSubview(vStackView)
         
         vStackView.snp.makeConstraints { make in

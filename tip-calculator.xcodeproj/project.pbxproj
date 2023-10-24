@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		020E18CC2AE84DCB0050BACA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020E18CB2AE84DCB0050BACA /* AppDelegate.swift */; };
 		020E18CE2AE84DCB0050BACA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020E18CD2AE84DCB0050BACA /* SceneDelegate.swift */; };
-		020E18D02AE84DCB0050BACA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020E18CF2AE84DCB0050BACA /* ViewController.swift */; };
+		020E18D02AE84DCB0050BACA /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020E18CF2AE84DCB0050BACA /* CalculatorViewController.swift */; };
 		020E18D52AE84DCD0050BACA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 020E18D42AE84DCD0050BACA /* Assets.xcassets */; };
 		020E18D82AE84DCD0050BACA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 020E18D62AE84DCD0050BACA /* LaunchScreen.storyboard */; };
 		020E18E32AE84DCD0050BACA /* tip_calculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020E18E22AE84DCD0050BACA /* tip_calculatorTests.swift */; };
@@ -25,6 +25,9 @@
 		020E190F2AE86B7A0050BACA /* BillInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020E190E2AE86B7A0050BACA /* BillInputView.swift */; };
 		020E19112AE86B9D0050BACA /* TipInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020E19102AE86B9D0050BACA /* TipInputView.swift */; };
 		020E19132AE86BB70050BACA /* SplitInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020E19122AE86BB60050BACA /* SplitInputView.swift */; };
+		020E19162AE86ED30050BACA /* ThemeColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020E19152AE86ED30050BACA /* ThemeColor.swift */; };
+		020E19182AE86EE00050BACA /* ThemeFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020E19172AE86EE00050BACA /* ThemeFont.swift */; };
+		020E191B2AE86F2F0050BACA /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020E191A2AE86F2F0050BACA /* UIColor+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,7 +51,7 @@
 		020E18C82AE84DCB0050BACA /* tip-calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "tip-calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		020E18CB2AE84DCB0050BACA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		020E18CD2AE84DCB0050BACA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		020E18CF2AE84DCB0050BACA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		020E18CF2AE84DCB0050BACA /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
 		020E18D42AE84DCD0050BACA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		020E18D72AE84DCD0050BACA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		020E18D92AE84DCD0050BACA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -62,6 +65,9 @@
 		020E190E2AE86B7A0050BACA /* BillInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillInputView.swift; sourceTree = "<group>"; };
 		020E19102AE86B9D0050BACA /* TipInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipInputView.swift; sourceTree = "<group>"; };
 		020E19122AE86BB60050BACA /* SplitInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitInputView.swift; sourceTree = "<group>"; };
+		020E19152AE86ED30050BACA /* ThemeColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeColor.swift; sourceTree = "<group>"; };
+		020E19172AE86EE00050BACA /* ThemeFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeFont.swift; sourceTree = "<group>"; };
+		020E191A2AE86F2F0050BACA /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,10 +124,12 @@
 		020E18CA2AE84DCB0050BACA /* tip-calculator */ = {
 			isa = PBXGroup;
 			children = (
+				020E19192AE86F090050BACA /* Extensions */,
+				020E19142AE86EBC0050BACA /* Config */,
 				020E19092AE86A5C0050BACA /* View */,
 				020E18CB2AE84DCB0050BACA /* AppDelegate.swift */,
 				020E18CD2AE84DCB0050BACA /* SceneDelegate.swift */,
-				020E18CF2AE84DCB0050BACA /* ViewController.swift */,
+				020E18CF2AE84DCB0050BACA /* CalculatorViewController.swift */,
 				020E18D42AE84DCD0050BACA /* Assets.xcassets */,
 				020E18D62AE84DCD0050BACA /* LaunchScreen.storyboard */,
 				020E18D92AE84DCD0050BACA /* Info.plist */,
@@ -163,6 +171,23 @@
 				020E19122AE86BB60050BACA /* SplitInputView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		020E19142AE86EBC0050BACA /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				020E19152AE86ED30050BACA /* ThemeColor.swift */,
+				020E19172AE86EE00050BACA /* ThemeFont.swift */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		020E19192AE86F090050BACA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				020E191A2AE86F2F0050BACA /* UIColor+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -311,11 +336,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				020E18D02AE84DCB0050BACA /* ViewController.swift in Sources */,
+				020E18D02AE84DCB0050BACA /* CalculatorViewController.swift in Sources */,
 				020E190B2AE86A6B0050BACA /* LogoView.swift in Sources */,
+				020E19162AE86ED30050BACA /* ThemeColor.swift in Sources */,
+				020E191B2AE86F2F0050BACA /* UIColor+Extension.swift in Sources */,
 				020E190F2AE86B7A0050BACA /* BillInputView.swift in Sources */,
 				020E190D2AE86B620050BACA /* ResultView.swift in Sources */,
 				020E18CC2AE84DCB0050BACA /* AppDelegate.swift in Sources */,
+				020E19182AE86EE00050BACA /* ThemeFont.swift in Sources */,
 				020E18CE2AE84DCB0050BACA /* SceneDelegate.swift in Sources */,
 				020E19132AE86BB70050BACA /* SplitInputView.swift in Sources */,
 				020E19112AE86B9D0050BACA /* TipInputView.swift in Sources */,
