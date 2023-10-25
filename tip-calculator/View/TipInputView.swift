@@ -34,7 +34,7 @@ class TipInputView: UIView {
     }()
     
     private lazy var fiftyPercentTipButton: UIButton = {
-        let button = buildTipButton(tip: .fiften)
+        let button = buildTipButton(tip: .fifteen)
         return button
     }()
     
@@ -89,9 +89,9 @@ class TipInputView: UIView {
         
         headerView.snp.makeConstraints { make in
             make.leading.equalToSuperview()
+            make.centerY.equalTo(buttonHStackView.snp.centerY)
             make.trailing.equalTo(buttonVStackView.snp.leading).offset(-24)
             make.width.equalTo(68)
-            make.centerY.equalTo(buttonHStackView.snp.centerY)
         }
     }
     

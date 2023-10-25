@@ -11,7 +11,7 @@ enum Tip {
     
     case none
     case ten
-    case fiften
+    case fifteen
     case twenty
     case custom(value: Int)
     
@@ -21,7 +21,7 @@ enum Tip {
             return ""
         case .ten:
             return "10%"
-        case .fiften:
+        case .fifteen:
             return "15%"
         case .twenty:
             return "20%"
