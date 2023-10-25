@@ -19,7 +19,7 @@ class CalculatorViewModel {
     
     struct Output {
         let updateViewPublisher: AnyPublisher<Result, Never>
-        let resultCalculatorPublisher: AnyPublisher<Void, Never>
+        let resetCalculatorPublisher: AnyPublisher<Void, Never>
     }
     
     private var cancellables = Set<AnyCancellable>()
@@ -58,7 +58,7 @@ class CalculatorViewModel {
 
         return Output(
             updateViewPublisher: updateViewPublisher,
-            resultCalculatorPublisher: resultCalculatorPublisher
+            resetCalculatorPublisher: resultCalculatorPublisher
         )
     }
     
