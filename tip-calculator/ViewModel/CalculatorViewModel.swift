@@ -32,6 +32,10 @@ class CalculatorViewModel {
             print("the tip is: \(tip)")
         }.store(in: &cancellables)
         
+        input.splitPublisher.sink { split in
+            print("the split is: \(split)")
+        }.store(in: &cancellables)
+        
         let result = Result(
             amountPerPerson: 500,
             totalBill: 1000,

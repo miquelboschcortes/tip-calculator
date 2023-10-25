@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import Combine
+import CombineCocoa
 
 class SplitInputView: UIView {
     
@@ -25,6 +27,11 @@ class SplitInputView: UIView {
                 .layerMinXMaxYCorner,
                 .layerMinXMinYCorner]
         )
+        button.tapPublisher.flatMap { [unowned self] _ in
+            Just(splitSubject.value == 1 ? 1 : (splitSubject.value - 1))
+        }
+        .assign(to: \.value, on: splitSubject)
+        .store(in: &cancellables)
         return button
     }()
     
@@ -35,6 +42,11 @@ class SplitInputView: UIView {
                 .layerMaxXMinYCorner,
                 .layerMaxXMaxYCorner]
         )
+        button.tapPublisher.flatMap { [unowned self] _ in
+            Just(splitSubject.value + 1)
+        }
+        .assign(to: \.value, on: splitSubject)
+        .store(in: &cancellables)
         return button
     }()
     
@@ -59,13 +71,28 @@ class SplitInputView: UIView {
         return stackView
     }()
     
+    private var cancellables = Set<AnyCancellable>()
+    private let splitSubject: CurrentValueSubject<Int, Never> = .init(1)
+    var valuePublisher: AnyPublisher<Int, Never> {
+        return splitSubject
+            .removeDuplicates()
+            .eraseToAnyPublisher()
+    }
+    
     init() {
         super.init(frame: .zero)
         layout()
+        observe()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    private func observe() {
+        splitSubject.sink { [unowned self] quantity in
+            quantityLabel.text = quantity.stringValue
+        }.store(in: &cancellables)
     }
     
     private func layout() {
