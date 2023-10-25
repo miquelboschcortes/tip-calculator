@@ -38,6 +38,7 @@
 		02C139362AE92C0800AAB0CD /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C139352AE92C0800AAB0CD /* String+Extension.swift */; };
 		02C139382AE9378900AAB0CD /* UIResponder+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C139372AE9378900AAB0CD /* UIResponder+Extension.swift */; };
 		02C1393A2AE93D3F00AAB0CD /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C139392AE93D3F00AAB0CD /* Int+Extension.swift */; };
+		02C1393C2AE9505700AAB0CD /* Double+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C1393B2AE9505700AAB0CD /* Double+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +89,7 @@
 		02C139352AE92C0800AAB0CD /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		02C139372AE9378900AAB0CD /* UIResponder+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIResponder+Extension.swift"; sourceTree = "<group>"; };
 		02C139392AE93D3F00AAB0CD /* Int+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extension.swift"; sourceTree = "<group>"; };
+		02C1393B2AE9505700AAB0CD /* Double+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,6 +217,7 @@
 				02C139352AE92C0800AAB0CD /* String+Extension.swift */,
 				02C139372AE9378900AAB0CD /* UIResponder+Extension.swift */,
 				02C139392AE93D3F00AAB0CD /* Int+Extension.swift */,
+				02C1393B2AE9505700AAB0CD /* Double+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -406,6 +409,7 @@
 				020E18CC2AE84DCB0050BACA /* AppDelegate.swift in Sources */,
 				020E19182AE86EE00050BACA /* ThemeFont.swift in Sources */,
 				02C1392C2AE9006800AAB0CD /* HeaderView.swift in Sources */,
+				02C1393C2AE9505700AAB0CD /* Double+Extension.swift in Sources */,
 				02C139322AE9275D00AAB0CD /* CalculatorViewModel.swift in Sources */,
 				020E18CE2AE84DCB0050BACA /* SceneDelegate.swift in Sources */,
 				020E191E2AE8732C0050BACA /* LabelFactory.swift in Sources */,
