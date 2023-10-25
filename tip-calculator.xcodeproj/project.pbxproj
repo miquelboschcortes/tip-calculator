@@ -31,6 +31,8 @@
 		020E191E2AE8732C0050BACA /* LabelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020E191D2AE8732C0050BACA /* LabelFactory.swift */; };
 		020E19202AE879270050BACA /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020E191F2AE879270050BACA /* UIView+Extension.swift */; };
 		020E19222AE87E510050BACA /* AmountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020E19212AE87E510050BACA /* AmountView.swift */; };
+		021428DB2AE9C08D004A4185 /* click.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 021428DA2AE9C08D004A4185 /* click.m4a */; };
+		021428DE2AE9C0C0004A4185 /* AudioPlayerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021428DD2AE9C0C0004A4185 /* AudioPlayerService.swift */; };
 		02C1392C2AE9006800AAB0CD /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C1392B2AE9006800AAB0CD /* HeaderView.swift */; };
 		02C1392E2AE9075800AAB0CD /* Tip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C1392D2AE9075800AAB0CD /* Tip.swift */; };
 		02C139322AE9275D00AAB0CD /* CalculatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C139312AE9275D00AAB0CD /* CalculatorViewModel.swift */; };
@@ -82,6 +84,8 @@
 		020E191D2AE8732C0050BACA /* LabelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelFactory.swift; sourceTree = "<group>"; };
 		020E191F2AE879270050BACA /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		020E19212AE87E510050BACA /* AmountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountView.swift; sourceTree = "<group>"; };
+		021428DA2AE9C08D004A4185 /* click.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = click.m4a; sourceTree = "<group>"; };
+		021428DD2AE9C0C0004A4185 /* AudioPlayerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayerService.swift; sourceTree = "<group>"; };
 		02C1392B2AE9006800AAB0CD /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		02C1392D2AE9075800AAB0CD /* Tip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tip.swift; sourceTree = "<group>"; };
 		02C139312AE9275D00AAB0CD /* CalculatorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewModel.swift; sourceTree = "<group>"; };
@@ -146,6 +150,8 @@
 		020E18CA2AE84DCB0050BACA /* tip-calculator */ = {
 			isa = PBXGroup;
 			children = (
+				021428DC2AE9C0A4004A4185 /* Service */,
+				021428D92AE9C060004A4185 /* Resource */,
 				02C139302AE9274C00AAB0CD /* ViewModel */,
 				02C1392F2AE9076C00AAB0CD /* Model */,
 				020E191C2AE873140050BACA /* Factory */,
@@ -228,6 +234,22 @@
 				020E191D2AE8732C0050BACA /* LabelFactory.swift */,
 			);
 			path = Factory;
+			sourceTree = "<group>";
+		};
+		021428D92AE9C060004A4185 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				021428DA2AE9C08D004A4185 /* click.m4a */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		021428DC2AE9C0A4004A4185 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				021428DD2AE9C0C0004A4185 /* AudioPlayerService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 		02C1392F2AE9076C00AAB0CD /* Model */ = {
@@ -367,6 +389,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				021428DB2AE9C08D004A4185 /* click.m4a in Resources */,
 				020E18D82AE84DCD0050BACA /* LaunchScreen.storyboard in Resources */,
 				020E18D52AE84DCD0050BACA /* Assets.xcassets in Resources */,
 			);
@@ -405,6 +428,7 @@
 				020E19162AE86ED30050BACA /* ThemeColor.swift in Sources */,
 				020E191B2AE86F2F0050BACA /* UIColor+Extension.swift in Sources */,
 				020E190F2AE86B7A0050BACA /* BillInputView.swift in Sources */,
+				021428DE2AE9C0C0004A4185 /* AudioPlayerService.swift in Sources */,
 				020E190D2AE86B620050BACA /* ResultView.swift in Sources */,
 				020E18CC2AE84DCB0050BACA /* AppDelegate.swift in Sources */,
 				020E19182AE86EE00050BACA /* ThemeFont.swift in Sources */,

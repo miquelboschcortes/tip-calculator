@@ -14,13 +14,21 @@ class CalculatorViewModel {
         let billPublisher: AnyPublisher<Double, Never>
         let tipPublisher: AnyPublisher<Tip, Never>
         let splitPublisher: AnyPublisher<Int, Never>
+        let logoViewTapPublisher: AnyPublisher<Void, Never>
     }
     
     struct Output {
         let updateViewPublisher: AnyPublisher<Result, Never>
+        let resultCalculatorPublisher: AnyPublisher<Void, Never>
     }
     
     private var cancellables = Set<AnyCancellable>()
+    
+    private let audioPlayerService: AudioPlayerService
+    
+    init(audioPlayerService: AudioPlayerService = DefaultAudioPlayer()) {
+        self.audioPlayerService = audioPlayerService
+    }
     
     func transform(input: Input) -> Output {
         
@@ -41,8 +49,17 @@ class CalculatorViewModel {
             
             return Just(result)
         }.eraseToAnyPublisher()
+        
+        let resultCalculatorPublisher = input.logoViewTapPublisher.handleEvents(receiveOutput: { [unowned self] in
+            audioPlayerService.playSound()
+        }).flatMap {
+            return Just($0)
+        }.eraseToAnyPublisher()
 
-        return Output(updateViewPublisher: updateViewPublisher)
+        return Output(
+            updateViewPublisher: updateViewPublisher,
+            resultCalculatorPublisher: resultCalculatorPublisher
+        )
     }
     
     private func getTipAmount(bill: Double, tip: Tip) -> Double {
