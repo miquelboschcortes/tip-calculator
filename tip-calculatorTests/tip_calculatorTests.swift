@@ -14,11 +14,13 @@ final class tip_calculatorTests: XCTestCase {
     // sut -> system under test
     private var sut: CalculatorViewModel!
     private var cancellable: Set<AnyCancellable>!
-    
-    private let logoViewTapSubject = PassthroughSubject<Void, Never>()
+    private var logoViewTapSubject: PassthroughSubject<Void, Never>!
+    private var audioPlayerService: MockAudioPlayerService!
 
     override func setUp() {
-        sut = .init()
+        audioPlayerService = .init()
+        sut = .init(audioPlayerService: audioPlayerService)
+        logoViewTapSubject = .init()
         cancellable = .init()
         super.setUp()
     }
@@ -27,6 +29,7 @@ final class tip_calculatorTests: XCTestCase {
         super.tearDown()
         sut = nil
         cancellable = nil
+        audioPlayerService = nil
     }
     
     func testResultWithoutTipFor1Person() {
@@ -104,6 +107,23 @@ final class tip_calculatorTests: XCTestCase {
             XCTAssertEqual(result.totalTip, 4)
         }.store(in: &cancellable)
     }
+    
+    func testSoundPlayedAndCalculatorResetOnLogoViewTap() {
+        // given
+        let input = buildInput(bill: 100, tip: .ten, split: 2)
+        let output = sut.transform(input: input)
+        let expectation1 = XCTestExpectation(description: "reset calculator called")
+        let expectation2 = audioPlayerService.expectation
+        
+        // then
+        output.resetCalculatorPublisher.sink { _ in
+            expectation1.fulfill()
+        }.store(in: &cancellable)
+        
+        // when
+        logoViewTapSubject.send()
+        wait(for: [expectation1, expectation2], timeout: 1.0)
+    }
 
 }
 
@@ -118,6 +138,15 @@ extension tip_calculatorTests {
             splitPublisher: Just(split).eraseToAnyPublisher(),
             logoViewTapPublisher: logoViewTapSubject.eraseToAnyPublisher()
         )
+    }
+    
+}
+
+class MockAudioPlayerService: AudioPlayerService {
+    var expectation = XCTestExpectation(description: "playSound is called")
+    
+    func playSound() {
+        expectation.fulfill()
     }
     
 }
