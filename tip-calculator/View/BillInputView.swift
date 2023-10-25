@@ -10,7 +10,12 @@ import UIKit
 class BillInputView: UIView {
     
     private let headerView: HeaderView = {
-        HeaderView()
+        let header = HeaderView()
+        header.configure(
+            topText: "Enter",
+            bottomText: "your bill"
+        )
+        return header
     }()
     
     private let textFieldContainerView: UIView = {
@@ -107,21 +112,5 @@ class BillInputView: UIView {
     @objc
     private func doneButtonTapped() {
         textField.endEditing(true)
-    }
-}
-
-class HeaderView: UIView {
-    
-    init() {
-        super.init(frame: .zero)
-        layout()
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    private func layout() {
-        backgroundColor = .red
     }
 }

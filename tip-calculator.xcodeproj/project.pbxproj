@@ -31,6 +31,7 @@
 		020E191E2AE8732C0050BACA /* LabelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020E191D2AE8732C0050BACA /* LabelFactory.swift */; };
 		020E19202AE879270050BACA /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020E191F2AE879270050BACA /* UIView+Extension.swift */; };
 		020E19222AE87E510050BACA /* AmountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020E19212AE87E510050BACA /* AmountView.swift */; };
+		02C1392C2AE9006800AAB0CD /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C1392B2AE9006800AAB0CD /* HeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +75,7 @@
 		020E191D2AE8732C0050BACA /* LabelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelFactory.swift; sourceTree = "<group>"; };
 		020E191F2AE879270050BACA /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		020E19212AE87E510050BACA /* AmountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountView.swift; sourceTree = "<group>"; };
+		02C1392B2AE9006800AAB0CD /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +179,7 @@
 				020E19102AE86B9D0050BACA /* TipInputView.swift */,
 				020E19122AE86BB60050BACA /* SplitInputView.swift */,
 				020E19212AE87E510050BACA /* AmountView.swift */,
+				02C1392B2AE9006800AAB0CD /* HeaderView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -363,6 +366,7 @@
 				020E190D2AE86B620050BACA /* ResultView.swift in Sources */,
 				020E18CC2AE84DCB0050BACA /* AppDelegate.swift in Sources */,
 				020E19182AE86EE00050BACA /* ThemeFont.swift in Sources */,
+				02C1392C2AE9006800AAB0CD /* HeaderView.swift in Sources */,
 				020E18CE2AE84DCB0050BACA /* SceneDelegate.swift in Sources */,
 				020E191E2AE8732C0050BACA /* LabelFactory.swift in Sources */,
 				020E19132AE86BB70050BACA /* SplitInputView.swift in Sources */,
