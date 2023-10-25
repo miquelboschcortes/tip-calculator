@@ -48,7 +48,7 @@ class CalculatorViewController: UIViewController {
         
         let input = CalculatorViewModel.Input(
             billPublisher: billInputView.valuePublisher,
-            tipPublisher: Just(.ten).eraseToAnyPublisher(),
+            tipPublisher: tipInputView.valuePublisher,
             splitPublisher: Just(5).eraseToAnyPublisher()
         
         )
