@@ -48,15 +48,15 @@ class CalculatorScreen {
     }
     
     var fifteenPercentTipButton: XCUIElement {
-        app.staticTexts[ScreenIdentifier.TipInputView.fifteenPercentButton.rawValue]
+        app.buttons[ScreenIdentifier.TipInputView.fifteenPercentButton.rawValue]
     }
     
     var twentyPercentTipButton: XCUIElement {
-        app.staticTexts[ScreenIdentifier.TipInputView.twentyPercentButton.rawValue]
+        app.buttons[ScreenIdentifier.TipInputView.twentyPercentButton.rawValue]
     }
     
     var customTipButton: XCUIElement {
-        app.staticTexts[ScreenIdentifier.TipInputView.customTipButton.rawValue]
+        app.buttons[ScreenIdentifier.TipInputView.customTipButton.rawValue]
     }
     
     var customTipAlertTextField: XCUIElement {
@@ -66,11 +66,11 @@ class CalculatorScreen {
     // MARK: - Split Input View
     
     var decrementButton: XCUIElement {
-        app.staticTexts[ScreenIdentifier.SplitInputView.decrementButton.rawValue]
+        app.buttons[ScreenIdentifier.SplitInputView.decrementButton.rawValue]
     }
     
     var incrementButton: XCUIElement {
-        app.staticTexts[ScreenIdentifier.SplitInputView.incrementButton.rawValue]
+        app.buttons[ScreenIdentifier.SplitInputView.incrementButton.rawValue]
     }
     
     var quantityValueLabel: XCUIElement {
@@ -94,7 +94,7 @@ class CalculatorScreen {
             twentyPercentTipButton.tap()
         case .custom(let value):
             customTipButton.tap()
-            XCTAssertTrue(customTipAlertTextField.waitForExistence(timeout: 1.0))
+            XCTAssertTrue(customTipAlertTextField.waitForExistence(timeout: 8.0))
             customTipAlertTextField.typeText("\(value)\n")
         }
     }

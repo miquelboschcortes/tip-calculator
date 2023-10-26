@@ -58,7 +58,7 @@ class SplitInputView: UIView {
             font: ThemeFont.bold(ofSize: 20),
             backgroundColor: .white
         )
-        label.accessibilityIdentifier = ScreenIdentifier.SplitInputView.decrementButton.rawValue
+        label.accessibilityIdentifier = ScreenIdentifier.SplitInputView.quantityValueLabel.rawValue
         return label
     }()
     
