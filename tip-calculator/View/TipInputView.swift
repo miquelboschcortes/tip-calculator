@@ -26,6 +26,7 @@ class TipInputView: UIView {
         button.titleLabel?.font = ThemeFont.bold(ofSize: 20)
         button.backgroundColor = ThemeColor.primary
         button.tintColor = .white
+        button.accessibilityIdentifier = ScreenIdentifier.TipInputView.customTipButton.rawValue
         button.addCornerRadius(radius: 8)
         button.tapPublisher.sink { [weak self] _ in
             self?.handleCustomTipButton()
@@ -35,6 +36,7 @@ class TipInputView: UIView {
     
     private lazy var tenPercentTipButton: UIButton = {
         let button = buildTipButton(tip: .ten)
+        button.accessibilityIdentifier = ScreenIdentifier.TipInputView.tenPercentButton.rawValue
         button.tapPublisher.flatMap({
             Just(Tip.ten)
         })
@@ -45,6 +47,7 @@ class TipInputView: UIView {
     
     private lazy var fiftyPercentTipButton: UIButton = {
         let button = buildTipButton(tip: .fifteen)
+        button.accessibilityIdentifier = ScreenIdentifier.TipInputView.fifteenPercentButton.rawValue
         button.tapPublisher.flatMap({
             Just(Tip.fifteen)
         })
@@ -55,6 +58,7 @@ class TipInputView: UIView {
     
     private lazy var twentyPercentTipButton: UIButton = {
         let button = buildTipButton(tip: .twenty)
+        button.accessibilityIdentifier = ScreenIdentifier.TipInputView.twentyPercentButton.rawValue
         button.tapPublisher.flatMap({
             Just(Tip.twenty)
         })

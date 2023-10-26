@@ -27,6 +27,7 @@ class SplitInputView: UIView {
                 .layerMinXMaxYCorner,
                 .layerMinXMinYCorner]
         )
+        button.accessibilityIdentifier = ScreenIdentifier.SplitInputView.decrementButton.rawValue
         button.tapPublisher.flatMap { [unowned self] _ in
             Just(splitSubject.value == 1 ? 1 : (splitSubject.value - 1))
         }
@@ -42,6 +43,7 @@ class SplitInputView: UIView {
                 .layerMaxXMinYCorner,
                 .layerMaxXMaxYCorner]
         )
+        button.accessibilityIdentifier = ScreenIdentifier.SplitInputView.incrementButton.rawValue
         button.tapPublisher.flatMap { [unowned self] _ in
             Just(splitSubject.value + 1)
         }
@@ -51,11 +53,13 @@ class SplitInputView: UIView {
     }()
     
     private let quantityLabel: UILabel = {
-        LabelFactory.build(
+        let label = LabelFactory.build(
             text: "1",
             font: ThemeFont.bold(ofSize: 20),
             backgroundColor: .white
         )
+        label.accessibilityIdentifier = ScreenIdentifier.SplitInputView.decrementButton.rawValue
+        return label
     }()
     
     private lazy var stackView: UIStackView = {
