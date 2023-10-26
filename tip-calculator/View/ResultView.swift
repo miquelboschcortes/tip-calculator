@@ -27,6 +27,7 @@ class ResultView: UIView {
         )
         text.addAttributes([.font: ThemeFont.bold(ofSize: 24)], range: NSMakeRange(0, 1))
         label.attributedText = text
+        label.accessibilityIdentifier = ScreenIdentifier.ResultView.totalAmountPerPersonaValueLabel.rawValue
         return label
     }()
     
@@ -55,14 +56,15 @@ class ResultView: UIView {
     private let totalBillView: AmountView = {
         AmountView(
             title: "Total bill",
-            textAlignment: .left
+            textAlignment: .left,
+            amountLabelIdentifier: ScreenIdentifier.ResultView.totalBillValueLabel.rawValue
         )
     }()
     
     private let totalTipView: AmountView = {
         AmountView(
             title: "Total tip",
-            textAlignment: .right
+            textAlignment: .right, amountLabelIdentifier: ScreenIdentifier.ResultView.totalTipValueLabel.rawValue
         )
     }()
     
